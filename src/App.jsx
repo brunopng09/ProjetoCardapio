@@ -1,6 +1,6 @@
 import { useState } from "react"
 import Menu from  './components/Menu'
-import Categorias from  './components/Categorias'
+import Categorias from  "./components/Categorias"
 import BD from './data/dados'
 
 // OBTÉM TODAS AS CATEGORIAS UNICAS DO MENU, ADICIONADO "TODOS " NO INICIO DA PÁGINA

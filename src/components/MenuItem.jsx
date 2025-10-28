@@ -1,48 +1,21 @@
-import { useState } from "react"
-import Menu from  './components/Menu'
-import Categorias from  './components/Categorias'
-import BD from './data/dados'
-
-// OBTÉM TODAS AS CATEGORIAS UNICAS DO MENU, ADICIONADO "TODOS " NO INICIO DA PÁGINA
-const todasCategorias=["todos",...new Set(BD.map((item)=>item.opcao))]
-
-function App() {
- 
-  //HOOK: useState- manipula o estado da variavel
-  const [menuItems,setMenuItems]= useState(BD);
-  const [categorias] = useState(todasCategorias);
-
-  //FUNÇÃO FILTRAR ITEMS
-
-  const filtrarItems =(opcao)=>{
-    if(opcao ==="todos"){
-      setMenuItems(BD); // mostra todos os items
-    }else {
-      const novoItem = BD.filter((item)=>item.opcao ===opcao);
-      setMenuItems(novoItem); // mostra apenas o item filtrado
-    }
-    
-  }
-
+const MenuItem = ({ titulo, preco, imagem, descricao }) => {
   return (
-    <div>
-      <header>
-        <div>
-          <h1>Cardápio de Games</h1>
-          <div></div>
-        </div>
-      </header>
-     <main>
-      <section>
-        <Categorias categorias={categorias} filtroItems={filtrarItems}/>
-        <Menu items={menuItems}/>
-      </section>
-     </main>
-     <foote>
-        <p>&copy; 2025 todos direitos reservados.</p>
-     </foote>
-    </div>
-  )
-}
-
-export default App
+    <article className="bg-white rounded-xl shadow-lg flex flex-col overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl">
+      <img
+        src={imagem}
+        alt={titulo}
+        className="w-full h-52 object-cover rounded-t-xl"
+      />
+      <div className="p-5 flex flex-col ">
+        <header className="flex justify-between items-baseline border-b-2 border-orange-200 pb-2 mb-4">
+          <h4 className="text-xl text-slate-800  font-medium">{titulo}</h4>
+          <p className="text-xl text-orange-500 font-bold">
+            R$ {preco.toFixed(2)}
+          </p>
+        </header>
+        <p className="text-base text-gray-700">{descricao}</p>
+      </div>
+    </article>
+  );
+};
+export default MenuItem;
