@@ -1,16 +1,29 @@
-# React + Vite
+O que é?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Commits Semânticos são mensagens de commit padronizadas que descrevem de forma clara e concisa a natureza e o propósito das alterações feitas
+ em um projeto de software. Eles seguem uma convenção específica, como a Conventional Commits, que torna o histórico de 
+commits legível tanto para humanos quanto para máquinas.
 
-Currently, two official plugins are available:
+A ideia é substituir mensagens vagas (como "atualização" ou "correção de bug") por descrições detalhadas e estruturadas, que indicam o 
+tipo de mudança, o escopo (opcional) e uma descrição sucinta.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+Estrutura,Exemplo,Significado
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+feat: adicionar autenticação por redes sociais,Uma nova funcionalidade foi introduzida (autenticação social).
+
+feat(api): adicionar endpoint para criação de usuários,Uma nova funcionalidade foi introduzida na parte da API (criação de usuário).
+
+fix: corrigir erro de validação do formulário de registro,Foi corrigido um bug na validação do formulário, outro exemplofix(login): resolver falha de autenticação ao usar email maiúsculo,Foi corrigido um bug específico no módulo de login.
+
+docs: atualizar README com instruções de instalação,Mudança apenas na documentação do arquivo README.
+
+refactor: simplificar lógica da função de cálculo,"Código reestruturado para ser mais limpo ou legível, sem mudar o comportamento."
+
+test: adicionar testes unitários para o service de pedidos,Foram adicionados novos testes.
+
+chore: criar um novo projeto, atualizar dependências no package.json,Tarefa de manutenção que não afeta o código do aplicativo.
+
+style: ajustar indentação no arquivo main.css,Mudança apenas de estilo/formatação.
